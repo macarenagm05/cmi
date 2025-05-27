@@ -1,6 +1,7 @@
 ## Coffee & Dreams
 
 Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de la Universidad de Granada
+**Enlace al juego** : https://macarenagm05.itch.io/coffee-dreams
 
 
 
@@ -24,7 +25,7 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 
 
 
-**Resolución:** 1152 x 648 px
+**Resolución:** 900 x 500 px reajustable
 
 **Probado en:**  Google Chrome
 
