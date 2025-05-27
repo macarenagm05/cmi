@@ -20,7 +20,8 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 
 **Logotipo** : 
 
-![](https://drive.google.com/file/d/1kzF2JUvDXM4hV-TlLdEWkb0UeIuosrjR/view?usp=drive_link)
+![IMG_2547 (2)](https://github.com/user-attachments/assets/60a0eb7f-c4b0-41fd-ac06-f42b9af2296d)
+
 
 
 **Resolución:** 1152 x 648 px
@@ -47,13 +48,16 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 
 Eres el nuevo empleado de la cafetería "Coffee & Dreams" y allí deberás llevar a cabo la tarea de conseguir el mayor número de estrellas posible, con cuidado de no chocar con los obstáculos que van apareciendo en pantalla, meta que se volverá cada vez más complicada ya que cuantas más estrellas cojas, más aumenta tu velocidad.
 
-![](https://drive.google.com/file/d/1Vkp3DHKgwtmP-qmWLF3C2l3hunXt0aIw/view?usp=drive_link)
+![IMG_2566](https://github.com/user-attachments/assets/621a0ed5-c9a6-467b-9554-ad01fae8fb3b)
+
 
 
 
 ### 2.2. Esquema de navegación 
 
-![](https://drive.google.com/file/d/1HoPYLOzhX_n76N1gmjAaS5kAWzSRBcGy/view?usp=drive_link)
+![IMG_2565](https://github.com/user-attachments/assets/bf9be4e2-d104-4c0b-87b2-393a557a5c7c)
+
+
 
 
 
