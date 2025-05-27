@@ -1,6 +1,6 @@
-## (Nombre del proyecto)
+## Coffee & Dreams
 
-Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de la Univesidad de Granada
+Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de la Universidad de Granada
 
 
 
@@ -8,54 +8,54 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 
 
 
-**Titulo** : MI Proyecto(nombre)
+**Titulo** : Coffee & Dreams
 
 **Web:**   (url github.io)
 
-**Autor:**  (Nombre apellidos)
+**Autor:**  Macarena Gómez Martínez
 
-**Resumen** : Este proyecto busca contar las hitorias de migrantes jóvenes, siendo ellos mismos los protagonistas. Esta será una compilación de relatos y crónicas de sus experiencias, exponiendo su lucha de identidad y sentido de pertenencia, herencia migratoria, entre otros temas que abrirán un debate del tema.
+**Resumen** : Convierte en el nuevo empleado de "Coffee &  Dreams" y ayuda a sus dueñas a conseguir el mayor número de estrellas posibles.
 
-**Estilo/género:**  Novela / juego / portfolio / documental... etc.
+**Estilo/género:**  Arcade
 
-**Logotipo** : (insertar imagen y breve justificación, si  tiene) 
+**Logotipo** : 
 
-(insertar imágenes a resolucion de 100px alto)
+![](https://drive.google.com/file/d/1kzF2JUvDXM4hV-TlLdEWkb0UeIuosrjR/view?usp=drive_link)
 
-**Resolución:** 800x600px responsivo/o tamaño fijo (indicar la que has aplicado, y si es reescalable)
 
-**Probado en:**   (indicar dónde has probado que funciona: ej. Google Chrome / MS Edge... /móviles android )
+**Resolución:** 1152 x 648 px
 
-**Tamaño proyecto:** 14MB 
+**Probado en:**  Google Chrome
+
+**Tamaño proyecto:** 96,275 KB
 
 **Licencia** Este proyecto tiene una Licencia CC Reconocimiento Compartir igual (CC BY-SA)
 
-**Fecha** : 14/05/2020
+**Fecha** : 25/05/2025
 
-**Medios** (donde se tiene presencia relacionada):
+**Medios** 
 
-- Github:
-- Twitter
-- Instagram
+- Github: 
 
 
-![girl](https://github.com/mgea/cmi20/blob/master/WalkingGirl_front01.png)
+
+
 
 # 2. Memoria del proyecto 
 
 ### 2.1 Storyboard: 
 
+Eres el nuevo empleado de la cafetería "Coffee & Dreams" y allí deberás llevar a cabo la tarea de conseguir el mayor número de estrellas posible, con cuidado de no chocar con los obstáculos que van apareciendo en pantalla, meta que se volverá cada vez más complicada ya que cuantas más estrellas cojas, más aumenta tu velocidad.
 
-
-(narra brevemente lo que sucede en tu proyecto, puedes usar 3-4 imágenes de apoyo)
+![](https://drive.google.com/file/d/1Vkp3DHKgwtmP-qmWLF3C2l3hunXt0aIw/view?usp=drive_link)
 
 
 
 ### 2.2. Esquema de navegación 
 
+![](https://drive.google.com/file/d/1HoPYLOzhX_n76N1gmjAaS5kAWzSRBcGy/view?usp=drive_link)
 
 
-(imagen con las distintas pantallas de navegación, usa draw.io o cualquier programa de dibujo)
 
 
 
@@ -65,28 +65,28 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 
 # 3. Metodología
 
-Metodología de desarrollo de productos multimedia basado en una metodología de UX (User Experience)
+
 
 
 
 ### Etapa 1: Ideación de proyecto
 
-**Investigación de campo** (propuestas inspiradoras para el proyecto)
+**Investigación de campo** 
+Proyectos que me han inspirado de cara a la elaboración de mi juego:
+- "My Sims": por su original diseño de personaje, combinando un estilo sencillo con formas y elementos que ayudan a dotar a cada uno de ellos de una esencia única.
 
-- Portfolio [Leonardi Web page](http://www.rleonardi.com/interactive-resume/) para idear cómo organizar el material
-- 
-
+-  "Snake": por conseguir crear, a partir de una dinámica tan sencilla, un pequeño videojuego que nos garantiza largas horas de entretenimiento en el que además cada partida es distinta a la anterior.
 
 
 **Motivación de la propuesta** 
 
-Este  proyecto es interesante porque ... 
+Considero este proyecto interesante porque se trata de un enfoque algo distinto a un clásico de los videojuegos como es el "Snake" además de introducirlo en un contexto nuevo y con personajes que lo acompañan.
 
 
 
 **Publico / audiencia**
 
-- Orientado a 
+- Orientado a todos los públicos
 
 
 
@@ -94,53 +94,47 @@ Este  proyecto es interesante porque ...
 
 ### Etapa 2: Desarrollo / actividades realizadas
 
-(qué soluciones has planteado y cómo se han resuelto: juego, galería de fotos, grabación de video, etc.)
+- Juego: para el desarrollo de este, decidí basar la dinámica principal en la colisión de distintos nodos Area 2D (cada uno con un Sprite y un Collision Shape 2D como nodos hijos). El nodo del personaje que controlamos, la taza, deberá moverse por la escena para así alcanzar las estrellas que van apareciendo en esta, sin embargo, por cada estrella alcanzada, el nodo 2D Spawner (hijo del nodo Gameplay, que es donde se desarrolla toda la acción)  se encargará de tres tareas: hacer desaparecer dicha estrella; generar una nueva; y hacer aparecer un obstáculo el cual, al chocar con él, hará que se pause la escena Gameplay y haciendo aparecer sobre este la escena GameOver (que está creada como CanvasLayer para así poder permitir cierta transparecia y que sigamos viendo la pantalla de juego abajo y que en el script de Gameplay está marcada como constante)que se encarga de pausar el juego, además en esta nos aparecerá un contador con nuestra puntuación final (el número de estrellas conseguidas) y dos botones: uno que nos llevará directamente a comenzar el juego de nuevo (es decir, de nuevo a la escena Gameplay) y otro que nos lleva de vuelta al menú. Por último, destacar que el juego cuenta con una variable Speed que hará que sea posible el aumento de la velocidad a medida que vayamos consiguiendo estrellas.
 
-- Juego. 
-- Video 
-- Instrucciones y ayuda al usuario 
-- Menús y elementos de navegación (botones)
-- etc.
+- Galería de fotos: esta presenta distintas ilustraciones que sirven como presentación de los distintos personajes además de una pequeña animación de estos que se reproduce en bucle. Cuenta con dos botones (hacia delante y hacia atrás) que permiten la navegación entre los distintos elementos y uno más que nos lleva al menú, todos ellos dotados de sonido y themes personalizados realizados por mí.
 
+- Menú y elementos de navegación: cuenta con una animación de fondo que se reproduce en bucle creada a partir de un nodo Parallax en una escena a parte, a esto se le suman distintos botones variados con themes para todos sus estados (hover, pressed y normal) y sonido (tanto de fondo como en dichos botones) y también la presencia de un timer en cada uno de estos a lo largo de todo el juego que nos permiten aclimatarnos un poco a las transiciones entre escenas y apreciar más los distintos sonidos que estos poseen.
 
+- Teaser: sirve como presentación del juego, realizado mediante el uso del nodo Animation Player y que también cuenta con sonido ambiental.
 
 ### Etapa 3: Problemas identificados
 
-(que consideras que no  funciona correctamente y por qué )
+En ocasiones existe la posibilidad de que las distintas estrellas que debemos coger aparezcan en el mismo punto que los obstáculos que debemos esquivar, haciendo que no sea posible continuar con el juego.
 
 
 
 # 4. Conclusiones 
 
-(explica brevemente tu valoración, problemas que has detectado y que te gustaría hacer o mejorar en el futuro )
-
-
-
-
-
+A pesar de estar contenta con el resultado, ya que la programación es algo con lo que yo no tenía experiencia previa, quizás me hubiera gustado explorar un poco más la posibilidad de añadir distintos elementos en pantalla que hicieran la mecánica del juego algo más complicada, y también que estos se hubieran generado de forma aleatoria para así hacer cada partida completamente distinta a la anterior.
 
 
 # 5 Referencias 
 
-**Artículos y blogs ** 
-
-- Crofts, S., Fox, M., Retsema, A. and Williams, B. (2005) *Podcasting: A new technology in search of viable business models*First Monday, 10(9). https://doi.org/10.5210/fm.v10i9.1273. Recuperado el 8 de abril de 2020 de: https://journals.uic.edu/ojs/index.php/fm/article/view/1273/1193
+* Tutorial Snake de Bacon and Games: https://youtu.be/c7HQwxs5y8w?si=UJhapObh2h95SmkQ
+	
 
 **Recursos y materiales audiovisuales:**
 
-* Musica:  
-* Imágenes:  
-* Tipografía
+* Musica (obtenida a través de Pixabay):  
+	* Exciting Upbeat Backgroung Music - original_soundtrack
+	* Twikles and Bells - alanajordan
+	* Magic Ascend - BenKirb
+	* Magic Descend - BenKirb
+	* Charming Twinkle Sound for Fantasy and Magic - UniversField
+* Imágenes:  Todas creadas originalmente por mí usando el software de dibujo Procreate
+* Video: Animación creada por mí en Procreate
+* Tipografía: 
+	*	Rockwell (Free Font Family)
+	*	Eina 01 Semibold  (Fontshmonts)
 
 **Herramientas utilizadas**
 
-- Hippani Animator 5.1
-- 
+- Godot Engine 4.4.1
+- Procreate
 
 
-
-(imagen de la licencia, copiar y pegar aquí la correcta)
-
-https://creativecommons.org/licenses/?lang=es
-
-Mayo 2023
