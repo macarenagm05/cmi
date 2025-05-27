@@ -10,7 +10,7 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 
 **Titulo** : Coffee & Dreams
 
-**Web:**   (url github.io)
+**Web:**  https://github.com/macarenagm05
 
 **Autor:**  Macarena Gómez Martínez
 
@@ -35,7 +35,7 @@ Proyecto de Creación Multimedia Interactiva de la  Facultad de Bellas Artes de 
 
 **Medios** 
 
-- Github: 
+- Github:  https://github.com/macarenagm05
 
 
 
