@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnwiqlrer6fpl"]
+
+[ext_resource type="Script" uid="uid://b3hecf8s6ohqe" path="res://gameplay/Head.gd" id="1_o7rgl"]
+[ext_resource type="Texture2D" uid="uid://68hqa00asa7g" path="res://gameplay/sprites/taza.PNG" id="2_j32nq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o7rgl"]
+radius = 19.4165
+
+[node name="Head" type="Area2D"]
+script = ExtResource("1_o7rgl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, 4.76837e-07)
+scale = Vector2(0.272845, 0.253378)
+texture = ExtResource("2_j32nq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_o7rgl")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

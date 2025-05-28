@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2cco1d4m2l65"]
+
+[ext_resource type="Script" uid="uid://d4fugehgr1qps" path="res://gameplay/tail.gd" id="1_kioum"]
+[ext_resource type="Texture2D" uid="uid://eqn20qp2m8ta" path="res://gameplay/sprites/caca.PNG" id="3_8mod2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4rtxl"]
+
+[node name="Tail" type="Area2D"]
+script = ExtResource("1_kioum")
+textures = Array[Texture]([ExtResource("3_8mod2")])
+metadata/_custom_type_script = "uid://w4dpl1h3w8l"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.263808, 0.263808)
+texture = ExtResource("3_8mod2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4rtxl")

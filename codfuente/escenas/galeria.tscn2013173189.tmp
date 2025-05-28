@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cktoec1lvbivl"]
+
+[ext_resource type="Script" uid="uid://ctfuj1xgmw1df" path="res://escenas/galeria.gd" id="1_t12tu"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_t12tu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="botonsiguiente" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="botonsiguiente" to="." method="_on_botonsiguiente_pressed"]

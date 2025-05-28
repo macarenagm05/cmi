@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl3h0frw7diwt"]
+
+[ext_resource type="Texture2D" uid="uid://bvk7a1bet4be5" path="res://gameplay/sprites/estellablanca.PNG" id="1_c7u7h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vwpdc"]
+
+[node name="Food" type="Area2D" groups=["Food"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_c7u7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vwpdc")

@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8gp6wkvlke7m"]
+
+[ext_resource type="Texture2D" uid="uid://ph8kbkptl66o" path="res://assetscomojugar/fondoseleccion.JPG" id="1_ldnjm"]
+[ext_resource type="Theme" uid="uid://d61s6drv2vxd" path="res://themesbotones/botongenya.tres" id="2_vhy57"]
+[ext_resource type="Theme" uid="uid://bpmlif7mfcl0" path="res://themesbotones/botonzoya.tres" id="2_y6t1x"]
+[ext_resource type="AudioStream" uid="uid://ctmjckkwjlkwj" path="res://sonidos/sonidosmenu/botoninicio.mp3" id="4_y6t1x"]
+
+[sub_resource type="GDScript" id="GDScript_vhy57"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_genya_pressed() -> void:
+	$sonidoseleccion.play()
+	await get_tree().create_timer(2).timeout #Espera 2 segundos
+	get_tree().change_scene_to_file(\"res://escenas/puzzlegenya.tscn\")
+
+
+func _on_genya_mouse_entered() -> void:
+	$genya/hovergenya.visible = true
+
+
+func _on_genya_mouse_exited() -> void:
+	$genya/hovergenya.visible = false
+"
+
+[sub_resource type="FontVariation" id="FontVariation_vhy57"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6t1x"]
+bg_color = Color(1, 1, 1, 0.615686)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_vhy57")
+
+[node name="Fondoseleccion" type="Sprite2D" parent="."]
+position = Vector2(589, 327)
+scale = Vector2(1.00583, 1.01538)
+texture = ExtResource("1_ldnjm")
+
+[node name="zoya" type="Button" parent="."]
+offset_left = 789.0
+offset_top = 118.0
+offset_right = 1013.0
+offset_bottom = 641.0
+theme = ExtResource("2_y6t1x")
+
+[node name="genya" type="Button" parent="."]
+offset_left = 358.0
+offset_top = 120.0
+offset_right = 556.0
+offset_bottom = 341.0
+theme = ExtResource("2_vhy57")
+
+[node name="hovergenya" type="Label" parent="genya"]
+visible = false
+layout_mode = 0
+offset_left = -63.0
+offset_top = -36.0
+offset_right = 298.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.000461201, 0.0347412, 0.271413, 0.839216)
+theme_override_fonts/font = SubResource("FontVariation_vhy57")
+theme_override_styles/normal = SubResource("StyleBoxFlat_y6t1x")
+text = "¡Hola! ¿Podrias ayudarme con unas 
+comandas?"
+horizontal_alignment = 1
+
+[node name="sonidoseleccion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_y6t1x")
+
+[connection signal="mouse_entered" from="genya" to="." method="_on_genya_mouse_entered"]
+[connection signal="mouse_exited" from="genya" to="." method="_on_genya_mouse_exited"]
+[connection signal="pressed" from="genya" to="." method="_on_genya_pressed"]

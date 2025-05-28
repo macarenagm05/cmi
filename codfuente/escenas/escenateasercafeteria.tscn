@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://csormibel2mfl"]
+
+[ext_resource type="Texture2D" uid="uid://buhdpn3h7f4ny" path="res://assetsteasercafeteria/fondo cafeteria.PNG" id="1_2sgpk"]
+[ext_resource type="Texture2D" uid="uid://dw57ikcdq0ptn" path="res://assetsteasercafeteria/ventanas.png" id="2_e8iwn"]
+[ext_resource type="Texture2D" uid="uid://ben38u8j3ehkn" path="res://assetsteasercafeteria/estrellas fondo.png" id="3_q8pmu"]
+[ext_resource type="Texture2D" uid="uid://bkl7738i26rsu" path="res://assetsteasercafeteria/mesas.PNG" id="4_un0sl"]
+
+[sub_resource type="GDScript" id="GDScript_yxg4q"]
+script/source = "extends ParallaxBackground
+
+func _process(delta): 
+	var velocidad = 90
+	scroll_offset.x -= velocidad * delta
+	
+"
+
+[node name="fondoparallax" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = SubResource("GDScript_yxg4q")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1100, 0)
+
+[node name="FondoCafeteria" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(575.5, 328)
+scale = Vector2(0.990833, 1.02769)
+texture = ExtResource("1_2sgpk")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1175, 0)
+
+[node name="Capa2(2)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(600, 394)
+scale = Vector2(1.03667, 1.12)
+texture = ExtResource("2_e8iwn")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1000, 0)
+
+[node name="EstrellasFondo" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(557.5, 318)
+scale = Vector2(1.03417, 1.04615)
+texture = ExtResource("3_q8pmu")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(1300, 0)
+
+[node name="Mesas" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(572, 433)
+texture = ExtResource("4_un0sl")

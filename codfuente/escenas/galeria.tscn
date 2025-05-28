@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://cktoec1lvbivl"]
+
+[ext_resource type="Script" uid="uid://ctfuj1xgmw1df" path="res://escenas/galeria.gd" id="1_t12tu"]
+[ext_resource type="VideoStream" uid="uid://11dweh5val7g" path="res://videogaleria.ogv" id="2_uo4b4"]
+[ext_resource type="Theme" uid="uid://b4rkbnjk6wipo" path="res://themesbotones/botonatras.tres" id="3_uo4b4"]
+[ext_resource type="Theme" uid="uid://di6juoufqrcea" path="res://themesbotones/botonadelante.tres" id="3_youxc"]
+[ext_resource type="AudioStream" uid="uid://djbiuxjfpb3yi" path="res://sonidos/sonidosmenu/creditosygaleria.mp3" id="5_d5c3a"]
+[ext_resource type="AudioStream" uid="uid://clji4yx541ldt" path="res://sonidos/sonidosteaser/animacionteaser.mp3" id="6_2q6rc"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_t12tu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -27.0
+offset_top = -30.0
+offset_right = 1166.0
+offset_bottom = 683.0
+stream = ExtResource("2_uo4b4")
+expand = true
+loop = true
+
+[node name="botonanterior" type="Button" parent="."]
+offset_left = 57.0
+offset_top = 513.0
+offset_right = 163.0
+offset_bottom = 618.0
+theme = ExtResource("3_uo4b4")
+
+[node name="botonsiguiente" type="Button" parent="."]
+offset_left = 181.0
+offset_top = 515.0
+offset_right = 287.0
+offset_bottom = 618.0
+theme = ExtResource("3_youxc")
+
+[node name="botonmenu" type="Button" parent="."]
+offset_left = 41.0
+offset_top = 29.0
+offset_right = 108.0
+offset_bottom = 97.0
+theme = ExtResource("3_uo4b4")
+
+[node name="sonidoboton" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_d5c3a")
+
+[node name="musicafondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_2q6rc")
+autoplay = true
+
+[connection signal="pressed" from="botonanterior" to="." method="_on_botonanterior_pressed"]
+[connection signal="pressed" from="botonsiguiente" to="." method="_on_botonsiguiente_pressed"]
+[connection signal="pressed" from="botonmenu" to="." method="_on_botonmenu_pressed"]
